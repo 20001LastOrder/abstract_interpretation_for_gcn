@@ -1,0 +1,27 @@
+
+dev: false
+max_epochs: 1 #50
+learning_rate: 0.005
+p: 12
+check_val_every_n_epoch: 60
+run_dir: /runs
+accumulate_grad_batches: 5
+loss: hinge-U # bce, hinge, pce
+seed: 3407
+weight_decay: 0.00001
+
+data_folder: ./robust-gcn-structure/datasets
+dataset: citeseer
+batch_size: 8
+test_ratio: 0.9
+sampling: True
+
+
+model_folder: ./robust-gcn-structure/pretrained_weights
+# margin: 0.9542
+method: poly
+steps: 15000 # 1500
+# resume_from_checkpoint: /runs/checkpoint.ckpt
+
+project_name: robust-gnn
+# experiment: True
